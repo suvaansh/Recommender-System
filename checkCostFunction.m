@@ -1,7 +1,7 @@
 function checkCostFunction(lambda)
 %CHECKCOSTFUNCTION Creates a collaborative filering problem 
 %to check your cost function and gradients
-%   CHECKCOSTFUNCTION(lambda) Creates a collaborative filering problem 
+%   CHECKCOSTFUNCTION(lambda) creates a collaborative filering problem 
 %   to check your cost function and gradients, it will output the 
 %   analytical gradients produced by your code and the numerical gradients 
 %   (computed using computeNumericalGradient). These two gradient 
@@ -37,11 +37,11 @@ numgrad = computeNumericalGradient( ...
                           num_movies, num_features, lambda);
 
 disp([numgrad grad]);
-fprintf(['The above two columns you get should be very similar.\n' ...
-         '(Left-Your Numerical Gradient, Right-Analytical Gradient)\n\n']);
+fprintf(['The above two columns we get should be very similar.\n' ...
+         '(Left-Our Numerical Gradient, Right-Analytical Gradient)\n\n']);
 
 diff = norm(numgrad-grad)/norm(numgrad+grad);
-fprintf(['If your cost function implementation is correct, then \n' ...
+fprintf(['If our cost function implementation is correct, then \n' ...
          'the relative difference will be small (less than 1e-9). \n' ...
          '\nRelative Difference: %g\n'], diff);
 
